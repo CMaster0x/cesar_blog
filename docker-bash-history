@@ -1,0 +1,7 @@
+rails webpacker:install
+which rails
+bundle exec rails webpacker:install
+echo $DB_PASSWORD
+ping pg
+bundle exec rails dbconsole -p
+bin/rails routes

@@ -1,0 +1,35 @@
+version: "3.7"
+
+services:
+  pg:
+    image: postgres:12.2-alpine
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+
+  app:
+    build: .
+    command: bundle exec rails s -b 0.0.0.0 -p 3000
+    entrypoint: /app/docker-entrypoint.sh
+    ports:
+      - '3000:3000'
+      - '3035:3035'
+    depends_on:
+      - pg
+    volumes:
+      - .:/app
+      - gems:/gems
+      - ./docker-bash-history:/root/.bash_history
+    environment:
+      RAILS_ENV: development
+      HEADLESS: "true"
+      DB_HOST: pg
+      DB_USERNAME: postgres
+      DB_PASSWORD: password
+    stdin_open: true
+    tty: true
+
+volumes:
+  pg_data:
+  gems:

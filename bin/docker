@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+function is_not_running(){
+  [ -z `docker-compose ps -q app` ] || [ -z `docker ps -q --no-trunc | grep $(docker-compose ps -q app)` ]
+}
+
+function log_message(){
+  echo "[ bin/docker ] $1"
+}
+
+if [[ "$1" == up ]]; then
+  log_message "Starting services."
+  docker-compose down && docker-compose up
+elif [[ "$1" == build ]]; then
+  log_message "Building services."
+  docker-compose build
+elif [[ "$1" == down ]]; then
+  log_message "Stopping services."
+  docker-compose down
+elif [[ "$1" == bash ]]; then
+  log_message "Binding to service."
+  if is_not_running; then
+    log_message "No running docker compose app service, starting now."
+    docker-compose down && docker-compose run --rm -p 3000:3000 -p 3035:3035 app bash
+  else
+    docker exec -it $(docker-compose ps -q app) bash
+  fi
+fi

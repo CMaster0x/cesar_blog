@@ -1,0 +1,31 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:CesarBlog
+ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
+ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
+ApplicationCable	test/channels/application_cable/connection_test.rb	/^class ApplicationCable::ConnectionTest < ActionCable::Connection::TestCase$/;"	c
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::Base$/;"	c
+ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
+ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
+ApplicationSystemTestCase	test/application_system_test_case.rb	/^class ApplicationSystemTestCase < ActionDispatch::SystemTestCase$/;"	c
+CesarBlog	config/application.rb	/^module CesarBlog$/;"	m
+Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	class:ApplicationCable
+Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	class:ApplicationCable
+User	app/models/user.rb	/^class User < ApplicationRecord$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
+destroy	app/controllers/users_controller.rb	/^  def destroy$/;"	f	class:UsersController
+die	.git/hooks/push-to-checkout.sample	/^die () {$/;"	f
+edit	app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersController
+index	app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
+new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
+system!	bin/setup	/^def system!(*args)$/;"	f
+update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
+user_params	app/controllers/users_controller.rb	/^  def user_params$/;"	f	class:UsersController
